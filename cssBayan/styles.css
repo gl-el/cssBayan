@@ -76,7 +76,7 @@ input:checked~.item__label>.item__content {
   content: "";
   width: 100%;
   height: 0.13em;
-  background-color: hsl(46, 100%, 60%);
+  background-color: hsl(256, 100%, 60%);
 }
 
 @media screen and (min-width: 820px) {
@@ -127,7 +127,7 @@ input:checked~.item__label>.item__content {
   }
 
   .item__label {
-    color: hsl(46, 100%, 60%);
+    color: hsl(256, 100%, 60%);
   }
 
   .item__icon {
@@ -162,7 +162,7 @@ input:checked~.item__label>.item__content {
   }
 
   input:active~.item__label>.item__title {
-    color: hsl(46, 100%, 60%);
+    color: hsl(256, 100%, 60%);
   }
 
 
