@@ -111,11 +111,11 @@ input:checked~.item__label>.item__content {
 
 @media screen and (min-width: 1920px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .item__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .accordion {
