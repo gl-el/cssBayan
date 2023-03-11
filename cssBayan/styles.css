@@ -78,7 +78,7 @@ input:checked~.item__label>.item__icon {
   background-color: hsl(256, 100%, 60%);
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 2rem;
     font-weight: 900;
@@ -113,12 +113,7 @@ input:checked~.item__label>.item__icon {
   }
 }
 
-@media screen and (min-width: 1920px) {
-
-  html::-webkit-scrollbar {
-    display: none;
-  }
-
+@media screen and (min-width: 1440px) {
   h1 {
     font-size: 2.3rem;
   }
@@ -133,7 +128,23 @@ input:checked~.item__label>.item__icon {
   }
 
   .accordion {
-    width: 50rem;
+    width: 50%;
+  }
+
+  .item__content {
+    max-height: 15em;
+  }
+
+  input:checked~.item__label>.item__content {
+    max-height: 15em;
+  }
+
+}
+
+@media (hover: hover) {
+  
+  html::-webkit-scrollbar {
+    display: none;
   }
 
   .accordion:hover .item__title {
@@ -141,7 +152,6 @@ input:checked~.item__label>.item__icon {
   }
 
   .item__label {
-    max-height: 2.5em;
     color: hsl(256, 100%, 60%);
   }
 
@@ -169,18 +179,6 @@ input:checked~.item__label>.item__icon {
 
   input:active~.item__label>.item__title {
     color: hsl(256, 100%, 60%);
-  }
-  
-  .item__content {
-    max-height: 15em;
-  }
-
-  input:hover~.item__label>.item__content {
-    max-height: 15em;
-  }
-
-  input:checked~.item__label>.item__content {
-    max-height: 15em;
   }
 
 }
