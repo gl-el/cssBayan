@@ -90,7 +90,7 @@ input:checked~.item__label>.item__icon {
   }
 
   .item__content {
-    padding-top: 1em;
+    padding-top: 1.3em;
   }
 
   .item__title {
@@ -141,7 +141,7 @@ input:checked~.item__label>.item__icon {
 
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   
   html::-webkit-scrollbar {
     display: none;
