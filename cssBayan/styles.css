@@ -4,6 +4,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html::-webkit-scrollbar {
+  display: block;
+}
+
 .accordion {
   margin: 0 auto;
   width: 80%;
@@ -29,11 +33,12 @@ input {
 .item__label {
   width: 100%;
   padding: 0.5em 0;
-  max-height: 2em;
+  max-height: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out;
 }
 
 input:checked~.item__label {
@@ -52,7 +57,7 @@ input:checked~.item__label {
   line-height: 1;
   height: 1rem;
   transform: rotate(45deg);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 input:checked~.item__label>.item__icon {
@@ -60,16 +65,10 @@ input:checked~.item__label>.item__icon {
 }
 
 .item__content {
-  transform: scale(0);
-  max-height: 0;
+  max-height: 13em;
   max-width: 80%;
   padding-top: 0.5em;
   transition: all 0.3s ease-out;
-}
-
-input:checked~.item__label>.item__content {
-  transform: scale(1);
-  max-height: 13em;
 }
 
 .line {
@@ -86,6 +85,7 @@ input:checked~.item__label>.item__content {
   }
 
   .item__label {
+    max-height: 2em;
     padding: 1em 0;
   }
 
@@ -104,12 +104,21 @@ input:checked~.item__label>.item__content {
     height: 1.5rem;
   }
 
+  .item__content {
+    max-height: 20em;
+  }
+
   input:checked~.item__label>.item__content {
     max-height: 20em;
   }
 }
 
 @media screen and (min-width: 1920px) {
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
   h1 {
     font-size: 2.3rem;
   }
@@ -118,8 +127,13 @@ input:checked~.item__label>.item__content {
     font-size: 1.8rem;
   }
 
+  .item__icon {
+    font-size: 1.8rem;
+    height: 1.8rem;
+  }
+
   .accordion {
-    width: 50%;
+    width: 50rem;
   }
 
   .accordion:hover .item__title {
@@ -127,6 +141,7 @@ input:checked~.item__label>.item__content {
   }
 
   .item__label {
+    max-height: 2.5em;
     color: hsl(256, 100%, 60%);
   }
 
@@ -148,15 +163,6 @@ input:checked~.item__label>.item__content {
     transform: rotate(0deg);
   }
 
-  input:hover~.item__label>.item__content {
-    transform: scale(1);
-    max-height: 25em;
-  }
-
-  input:checked~.item__label>.item__content {
-    max-height: 25em;
-  }
-
   input:active~.item__label {
     opacity: 0.6;
   }
@@ -164,6 +170,17 @@ input:checked~.item__label>.item__content {
   input:active~.item__label>.item__title {
     color: hsl(256, 100%, 60%);
   }
+  
+  .item__content {
+    max-height: 15em;
+  }
 
+  input:hover~.item__label>.item__content {
+    max-height: 15em;
+  }
+
+  input:checked~.item__label>.item__content {
+    max-height: 15em;
+  }
 
 }
