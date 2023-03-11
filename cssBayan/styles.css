@@ -141,6 +141,34 @@ input:checked~.item__label>.item__icon {
 
 }
 
+@media screen and (min-width: 2560px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .item__title {
+    font-size: 2rem;
+  }
+
+  .item__icon {
+    font-size: 2rem;
+    height: 2rem;
+  }
+
+  .accordion {
+    width: 50%;
+  }
+
+  .item__content {
+    max-height: 22em;
+  }
+
+  input:checked~.item__label>.item__content {
+    max-height: 22em;
+  }
+
+}
+
 @media (hover: hover) and (pointer: fine) {
   
   html::-webkit-scrollbar {
